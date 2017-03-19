@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+           <link rel="stylesheet" href="CSS/custom.css"> 
+            <script src="JS/upload.js"></script>
+ 
+
+
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 uploadimg">
+
+
+</div>
+<div class="col-sm-12 upload">
+
+<div class="table">
+            <div class="tableRow">
+                <div class="tableCell box">
+                    <canvas id="panel" width="300" height="300"></canvas>
+                    <canvas id="blank" width="0" height="0"></canvas>
+                    <p>
+                     <!--     <input type="button" id="cropBttn" value="Crop">-->
+                    </p>
+                </div>
+               <!--  <div class="tableCell box">
+                    <img src="" id="croppedImage">
+                </div>--> 
+            </div>
+        </div>
+
+
+</div>
+<div class="col-sm-12 content">
+Take a picture of your mouth Closed Now
+</div>
+<div class="image-upload">
+    <label for="file-input">
+        <img src="Image/camera.jpg" width="50px" height="50px"/>
+    </label>
+
+    <input id="file-input" type="file" name="file" class="input display-none optional_check" accept="image/*"/>
+    
+   
+</div>
+
+<!-- Module 2 first page -->
+<span class="proceed" style="display: none;">Great!Now take a photo of your mouth wide open.</span>
+ <div class="image-upload1" style="display: none;">
+    <label for="file-input">
+        <img src="Image/camera.jpg" width="50px" height="50px"/>
+    </label>
+
+
+    <input type="file" accept="image/*"  id="file-input" capture /> 
+   
+</div>
+<!-- Module 2 second page -->
+<span class="proceed1" style="display: none;">Prefect Start Playing Now</span>
+ <span  class="glyphicon glyphicon-thumbs-up" id="startbutton1" style="display: none;"></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+
+var x, y, vx, vy;
+var SCREENHEIGHT, SCREENWIDTH;
+//this function runs on the initialization of the page 
+function init()
+{
+    SCREENWIDTH = window.innerWidth;
+    SCREENHEIGHT = window.innerHeight;
+    x = Math.random()*SCREENWIDTH;
+    y = Math.random()*SCREENHEIGHT;
+    vx = Math.random()*10 -5;
+    vy = Math.random()*10 -5;
+    mainloop();
+}
+
+//function runs repeatedly for the eternity
+function mainloop()
+{
+    x += vx;
+    y += vy;
+    if (x>SCREENWIDTH-20||x<0) vx = -1*vx;
+    if (y>SCREENHEIGHT-20||y<0) vy = -1*vy;
+    document.getElementById("box").style.left = x+"px";
+    document.getElementById("box").style.top = y+"px";
+    setTimeout(mainloop, 30);
+}
+    </script>
+</head>
+<body onload="init()">
+    <div id="box" style="position:absolute;width:20px; height:20px;background:#f00"></div>
+
+</body>
+</html>

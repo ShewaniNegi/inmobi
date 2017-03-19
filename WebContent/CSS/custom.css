@@ -1,0 +1,160 @@
+@media only screen and (min-width:320px)  and (max-width:500px) {
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+html{ 
+
+height:100%;
+
+  background: url(../Image/img2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.content{
+
+ text-shadow: 2px 2px 8px #FF0000;
+ font: italic bold 20px/30px Georgia, serif;
+ 
+}
+
+.start{
+
+border:1px solid green;
+background:yellow;
+align:center;
+font-size:24px;
+font-weight: bold;
+padding:15px 50px;
+
+}
+.row{
+
+    text-align: center;
+    //position:absolute;
+    //top:500px;
+
+}
+
+
+table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 10px 50px;
+    }
+    .tableRow {
+        display: table-row;
+    }
+    .tableCell {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .box {
+        border: 10px solid rgba(238, 238, 238, 0.6);
+        background-color: rgba(238, 238, 238, 0.2);
+    }
+//extra --ends
+#blank{
+display:none;
+}
+.tableCell{
+height:200px;
+width:300px;
+}
+.uploadimg{
+
+height:100px;
+
+background: url(../Image/img12.jpg) center no-repeat; 
+}
+.image-upload > input
+{
+    display: none
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+.row{
+
+    text-align: center;
+   
+
+}
+.content{
+
+ text-shadow: 2px 2px 8px #FF0000;
+ font: italic bold 18px/30px Georgia, serif;
+ 
+}
+.proceed
+{
+text-shadow: 2px 2px 8px #FF0000;
+font: italic bold 18px/30px Georgia, serif;
+display:block;
+ 
+}
+button .proceed
+{
+background-color:yellow;
+padding:10px 20px;
+
+}
+.resize-container {
+    position: relative;
+    display: inline-block;
+    cursor: move;
+    margin: 0 auto;
+}
+
+.resize-container img {
+    display: block
+}
+
+.resize-container:hover img,
+.resize-container:active img {
+    outline: 2px dashed rgba(222,60,80,.9);
+}
+.resize-handle-ne,
+.resize-handle-ne,
+.resize-handle-se,
+.resize-handle-nw,
+.resize-handle-sw {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: rgba(222,60,80,.9);
+    z-index: 999;
+}
+
+.resize-handle-nw {
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+}
+
+.resize-handle-sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+
+.resize-handle-ne {
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+}
+
+.resize-handle-se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+
+
+}
