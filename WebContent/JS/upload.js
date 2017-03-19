@@ -29,7 +29,7 @@ $(function () {
             	   }
            
                
-
+//upload .js changed for new method. 
               
               
              };  
