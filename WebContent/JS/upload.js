@@ -1,5 +1,6 @@
 $(function() {
 	var counter = 0;
+	var t;
 	$(":file").change(
 			function() {
 				var canvas = document.getElementById('panel');
@@ -12,17 +13,29 @@ $(function() {
 						var img = new Image();
 						img.onload = function() {
 							ctx.drawImage(img, 5, 5, 300, 300);
+							
+							
 						};
 
 						if (canvas.toDataURL() == document.getElementById(
 								'blank').toDataURL()) {
 
 							img.src = e.target.result;
+							t=img.src;
+							
+							
+							
+						
+							
 
 						} else {
+							localStorage.setItem("img1",t);
 							ctx.clearRect(0, 0, 600, 400);
 
 							img.src = e.target.result;
+							alert(img.src);
+							localStorage.setItem("img2", img.src);
+							
 						}
 
 						// upload .js changed for new method.
