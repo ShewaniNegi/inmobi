@@ -1,134 +1,50 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <meta charset="ISO-8859-1">
+
 <title>Insert title here</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <style>
-canvas { 
-  height: 98vh; 
-  width: 98vw; 
-  display: block;
-  border:2px solid red;
+
+<script
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<style>
+
+canvas {
+
+height: 100%;
+
+width: 100%;
+
+overflow: hidden;
+
+
+
 }
- </style>
 
-<script>
-	
-	function init() {
-		setup();
-		var testImage = $('<img/>').attr({
-		border:'1px solid red',
-		src:localStorage.getItem("img2"),
-	   
-	
-	    id: 'testImg',
-		style:"position:absolute; bottom: 1px; width:60px; height:60px; background: #f00; zindex:-1"
-	});
-	$('body').append(testImage);
-	
-	$(document).mousemove(function(event) {
-			
-		 $("#testImg").css({left: event.pageX});
-		 //console.log("bucket X"+event.pageX);
-		//console.log("bucket Y"+event.pageY);
-		});
-	
-	
-	
-	
-	
-
-	   
-	}
-
-	 var imgBg;
-		var imgDrops;
-		var x = 0;
-		var y = 0;
-		 var prex=0;
-		      var prey=0;
-		var noOfDrops =1;
-		var fallingDrops = [];
+</style>
 
 
-		var imgArray = new Array();
+<script src="JS/game.js" ></script>
 
-		imgArray[0] = new Image();
-		imgArray[0].src = 'Image/star.jpg';
-		
-		
-		imgArray[1] = new Image();
-		imgArray[1].src = 'Image/star1.jpg';
-		
-	
-		function draw() {
-			
-	        for (var i=0; i< noOfDrops; i++)
-	        {
-	        //remove older image 
-	       ctx.clearRect(prex,prey,30,30);
-	       prex=fallingDrops[i].x;
-	      prey=fallingDrops[i].y;
-	     // alert(fallingDrops[i].image);
-	    
-	      ctx.drawImage (fallingDrops[i].image, fallingDrops[i].x, fallingDrops[i].y); //The rain drop
-	   //   console.log("image x"+fallingDrops[i].x);
-	     // console.log("image y"+fallingDrops[i].y);
-	   
-	        fallingDrops[i].y += fallingDrops[i].speed; //Set the falling speed
-	        if (fallingDrops[i].y > 450) { 
-	        //Repeat the raindrop when it falls out of view
-	        fallingDrops[i].y = 0;//-25 //Account for the image size
-	        fallingDrops[i].x = Math.random() * 600; 
-	        //Make it appear randomly along the width    
-	        }
-	        
-	        
-	        }
-	    }
-
-	    function setup() {
-	        var canvas = document.getElementById('canvasRegn');
-
-	        if (canvas.getContext) {
-	                ctx = canvas.getContext('2d');
-	            
-	                setInterval(draw,4*Math.random()+16);
-	        for (var i = 0; i < noOfDrops; i++) {
-	            var fallingDr = new Object();
-	            fallingDr["image"] = imgArray[i];
-	            fallingDr["image"] = imgArray[i+1];
-	            	//alert("src"+imgArray[i]);
-	           
-	            
-	     // fallingDr.image.src = 'http://lorempixel.com/10/10/sports/';
-	                
-	            fallingDr["x"] = Math.random() * 600;
-	            fallingDr["y"] = 0;//Math.random() * 5;
-	            fallingDr["speed"] = 2+Math.random()*5;
-	            fallingDrops.push(fallingDr);
-	            console.log(fallingDr["x"]);
-	            }
-	      
-	    
-	        }
-	    }
-
-
-	
-	
-
-</script>
 </head>
+
 <body onload="init()">
 
 <canvas id="canvasRegn">           
+
  </canvas>
-	
+
+
 
 </body>
+
 </html>
 
 

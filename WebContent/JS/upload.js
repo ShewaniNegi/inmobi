@@ -12,7 +12,7 @@ $(function() {
 						var ctx = canvas.getContext('2d');
 						var img = new Image();
 						img.onload = function() {
-							ctx.drawImage(img, 5, 5, 300, 300);
+						ctx.drawImage(img, 5, 5, 300, 300);
 							
 							
 						};
@@ -33,8 +33,8 @@ $(function() {
 							ctx.clearRect(0, 0, 600, 400);
 
 							img.src = e.target.result;
-							alert(img.src);
-							localStorage.setItem("img2", img.src);
+							
+							sessionStorage.setItem("img2", img.src);
 							
 						}
 
